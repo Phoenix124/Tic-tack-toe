@@ -3,23 +3,29 @@ package main.java;
 /**
  * Created by Phoenix on 10.04.2017.
  */
-public class Field {
-    private char[][] board;
-    private char currentPlayer;
+public class field {
 
-    public Field(){
-        board = new char[3][3];
-        currentPlayer = 'x';
+    private int[][] board;
+    int count;
+    /** Доступ к полю*/
+    public int[][] getBoard() {
+        return board;
+    }
+    /** Конструктор */
+    public field(){
+        board = new int[3][3];
         InitializeField();
     }
-
+    /** Инициализация/рестарт поля*/
     public void InitializeField(){
-        for (int i = 0; i < 3; i++){
+        for (int i = 1; i < 3; i++){
             for(int j = 0; j < 3; j++){
-               board [i][j] = '-';
+               board [i][j] = count;
+               count++;
             }
         }
     }
+    /** Печать поля */
     public void PrintBoard(){
         System.out.println("----------");
 
