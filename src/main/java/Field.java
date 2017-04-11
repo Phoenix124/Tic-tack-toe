@@ -6,7 +6,7 @@ package main.java;
 public class Field {
 
     private int[][] board;
-    int count;
+    int count = 1;
 
     /**
      * Доступ к полю
@@ -29,7 +29,7 @@ public class Field {
      *
      * */
     public void initializeField(){
-        for (int i = 1; i < 3; i++){
+        for (int i = 0; i < 3; i++){
             for(int j = 0; j < 3; j++){
                board [i][j] = count;
                count++;
@@ -41,15 +41,13 @@ public class Field {
      *
      * */
     public void printBoard(){
-        System.out.println("----------");
 
         for (int i = 0; i < 3; i++){
-            System.out.println("| ");
+            System.out.print("| ");
             for (int j = 0; j < 3; j++){
-                System.out.println(board[i][j] + " | ");
+                System.out.print(board[i][j] + " | ");
             }
             System.out.println();
-            System.out.println("------------");
         }
     }
     /**
