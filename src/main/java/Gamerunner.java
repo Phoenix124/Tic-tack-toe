@@ -1,8 +1,5 @@
 package main.java;
 
-
-import java.util.Scanner;
-
 /**
  * Created by Phoenix on 10.04.2017.
  */
