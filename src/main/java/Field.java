@@ -5,65 +5,16 @@ package main.java;
  */
 public class Field {
 
-    private int[][] board;
-    int count = 1;
+    char mBoard[] = {'1','2','3','4','5','6','7','8','9'};
 
-    /**
-     * Доступ к полю
-     *
-     * */
-    public int [][] getBoard() {
-        return board;
+    void displayBoard()	{
+        System.out.println();
+        System.out.println(mBoard[0] + " | " + mBoard[1] + " | " + mBoard[2]);
+        System.out.println("-----------");
+        System.out.println(mBoard[3] + " | " + mBoard[4] + " | " + mBoard[5]);
+        System.out.println("-----------");
+        System.out.println(mBoard[6] + " | " + mBoard[7] + " | " + mBoard[8]);
+        System.out.println();
     }
-    /**
-     * Конструктор
-     *
-     * */
-    public Field(){
-        board = new int[3][3];
-        initializeField();
-    }
-    /**
-     *
-     * Инициализация/рестарт поля
-     *
-     * */
-    public void initializeField(){
-        for (int i = 0; i < 3; i++){
-            for(int j = 0; j < 3; j++){
-               board [i][j] = count;
-               count++;
-            }
-        }
-    }
-    /**
-     * Печать поля
-     *
-     * */
-    public void printBoard(){
 
-        for (int i = 0; i < 3; i++){
-            System.out.print("| ");
-            for (int j = 0; j < 3; j++){
-                System.out.print(board[i][j] + " | ");
-            }
-            System.out.println();
-        }
-    }
-    /**
-     * Проверка поля на заполнение
-     *
-     * */
-    public boolean isBoardFull(){
-        boolean isFull = true;
-
-        for (int i = 0; i < 3; i++){
-            for (int j = 0; j < 3; j++){
-                if(board[i][j] == 1){
-                    isFull = false;
-                }
-            }
-        }
-        return isFull;
-    }
 }
